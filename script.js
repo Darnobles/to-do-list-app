@@ -1,4 +1,4 @@
-$(.input).each(function(i) {
+function newItem(){
     
     let newElement = $('<li class ="inputValue>inputValue</li> ');
     $('body').append(newElement);
@@ -23,4 +23,4 @@ $(.input).each(function(i) {
     });
 
     $('#list').sortable();
-});
+};
