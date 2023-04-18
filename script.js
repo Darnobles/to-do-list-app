@@ -7,26 +7,22 @@ function newItem(){
 
     if(inputValue === '') {
         alert('You must write something!');
-        else {
+        } else {
             $('#list').append(li);
         }
-    }
 
     function crossOut() {
-        li.toggleClass('strike');
+        li.toggleClass('.strike');
     }
 
-    li.on('dblclick', function crossOut () {
-    li.toggleClass('strike');
-    });
+    li.on('dblclick', crossOut);
 
-    let crossOutButton = $('<crossOutButton></crossOutButton>')
-    $('.crossOutButton').append(document.CreateTextNode(X));
+    let crossOutButton = $('<crossOutButton>X</crossOutButton>')
     li.append(crossOutButton);
 
     crossOutButton.on('click', deleteListItem);
     function deleteListItem() {
-        li.addClass('delete')
+        li.addClass('delete');
     }
 
     $('#list').sortable();
